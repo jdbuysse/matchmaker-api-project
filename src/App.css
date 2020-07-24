@@ -1,0 +1,18 @@
+body{
+  background-color: antiquewhite;
+}
+
+.poem-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  margin-top: 20vh;
+  margin-left: 20vh;
+}
+
+.line{
+  background: tomato;
+  color: black;
+  width: 60%;
+}
