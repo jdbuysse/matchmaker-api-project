@@ -21,7 +21,7 @@ body{
 .line {
   background: tomato;
   color: black;
-  width: 60%;
+  width: fit-content;
   margin: .08px;
   display: inline-block;
   vertical-align: middle;
