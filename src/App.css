@@ -1,3 +1,7 @@
+a{
+  text-decoration: none;
+}
+
 body{
   background-color: antiquewhite;
 }
@@ -10,13 +14,6 @@ body{
   margin-top: 20vh;
   margin-left: 20vh;
 }
-/* 
-.line{
-  background: tomato;
-  color: black;
-  width: 60%;
-} */
-
 
 .line {
   background: tomato;
@@ -81,19 +78,10 @@ body{
   z-index: 1;
   overflow: hidden;
   
-  /* &--expanded {
-    background-size: 100%;
-    background-position: 0 0;
-    transform: translateX(0);
-  }
-  
-  &:hover {
-    background-position: 0 0;
-  } */
 }
 
 .sidebar-expanded {
-  width: 500px;
+  width: 600px;
   background-image: linear-gradient(
     #FCBD78,
     #FF65C3
@@ -107,14 +95,23 @@ body{
   transform: translateX(230px);
   transition: 300ms ease-in-out;
   z-index: 1;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-y: scroll;
   
   background-size: 100%;
   background-position: 0 0;
   transform: translateX(0);
 
-  /* &:hover {
-    background-position: 0 0;
-  } */ 
 }
 
+.line-card{
+  background-color: rgb(248, 246, 242);
+  opacity: 45%;
+  width: 90%;
+  margin-left: 30px;
+}
+
+.title{
+  font-weight: bold;
+  text-decoration: none;
+}

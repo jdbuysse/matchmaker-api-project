@@ -1,13 +1,25 @@
 import React from 'react';
+import LineCard from './LineCard'
 
-function Sidebar({expanded}) {
+function Sidebar({ expanded, selectedLine, data }) {
+    console.log(data)
+    if (expanded) {
 
+        return (<div className='sidebar-expanded'>
+            {data.map((datum, index) => (
+                <LineCard
+                    data={datum}
+                    key={index}
+                />
+            ))}
+            </div>)
+    }
     return (
-        <div 
-            className={expanded ? "sidebar-expanded" : "sidebar"}
-            onClick={console.log('toggel')} >
+        <div
+            className="sidebar"
+        >
         </div>
-         
+
     );
 }
 

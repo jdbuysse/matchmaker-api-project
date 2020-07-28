@@ -3,7 +3,13 @@ import './App.css';
 import Line from './Line';
 import Sidebar from './Sidebar';
 
+const t1 = require('./demos1.json')
+const t2 = require('./demos2.json')
+
 function App() {
+
+  //title, source, match topics, download/save buttons, matched query in context, scrollover image of page
+
   const [text, setText] = useState([
     {
       lineContent: "About suffering they were never wrong,",
@@ -48,7 +54,22 @@ function App() {
 
   ])
 
+//   const [articles, queryArticles] = useState([
+    
+  
+// ])
+
+  // const loadDemoJson = () => {
+  //   const t1 = require('./demos1.json')
+  //   const t2 = require('./demos2.json')
+  //   return [t1,t2]
+  // }
+  
   const [expanded, setExpand] = useState(false)
+
+  const [selectedLine, setCurrentLine] = useState({
+    currentLine: 0
+  })
 
   const toggleExpand = () => {
     expanded === false ? setExpand(true) : setExpand(false)
@@ -56,13 +77,16 @@ function App() {
 
   //this will change the text in state when I figure out 
   //how I want to handle my data
-  const newText = thing => {
-    setText(thing);
-  }
+  // const newText = thing => {
+  //   setText(thing);
+  // }
 
   const openSidebar = (line) => {
     console.log('open sidebar line', line)
     toggleExpand()
+    setCurrentLine({
+      currentLine: line
+    })
   }
 
   return (
@@ -71,7 +95,7 @@ function App() {
 
       </header>
     <main>
-        <Sidebar expanded={expanded}/>
+        <Sidebar expanded={expanded} selectedLine={selectedLine} data={t1}/>
         <div className="poem-text">
           {text.map((line, index) => (
             <Line
