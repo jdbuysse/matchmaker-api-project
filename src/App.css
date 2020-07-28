@@ -64,3 +64,32 @@ body{
   transform: translateX(4px);
 }
 
+.sidebar {
+  width: 300px;
+  background-image: linear-gradient(
+    #FCBD78,
+    #FF65C3
+  );
+  background-size: 200%;
+  background-position: 0 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateX(-230px);
+  transition: 300ms ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  
+  /* &--expanded {
+    background-size: 100%;
+    background-position: 0 0;
+    transform: translateX(0);
+  }
+  
+  &:hover {
+    background-position: 0 0;
+  } */
+}
+

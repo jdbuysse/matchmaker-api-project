@@ -2,49 +2,50 @@ import React, {useState} from 'react';
 import './App.css';
 //import Slider from './Slider';
 import Line from './Line';
+import Sidebar from './Sidebar';
 
 function App() {
  //we want each line to be a component I believe
   const [text, setText] = useState([
     {
       lineContent: "About suffering they were never wrong,",
-      selected: false
+      selected: 0
     },
     {
       lineContent: "The old Masters: how well they understood",
-      selected: false
+      selected: 1
     },
     {
       lineContent: "Its human position: how it takes place",
-      selected: false
+      selected: 2
     },
     {
       lineContent: "While someone else is eating or opening a window or just walking dully along;",
-      selected: false
+      selected: 3
     },
     {
       lineContent: "How, when the aged are reverently, passionately waiting",
-      selected: false
+      selected: 4
     },
     {
       lineContent: "For the miraculous birth, there always must be",
-      selected: false
+      selected: 5
     },
     {
       lineContent: "Children who did not specially want it to happen, skating",
-      selected: false
+      selected: 6
     },
     {
       lineContent: "On a pond at the edge of the wood:",
-      selected: false
+      selected: 7
     },
     {
       lineContent: "They never forgot",
-      selected: false
+      selected: 8
     },
     {
       lineContent: "For the miraculous birth, there always must be",
-      selected: false
+      selected: 9
     },
 
   ])
@@ -71,7 +72,8 @@ function App() {
       <header className="App-header">
 
       </header>
-      <div className="parent">
+    <main>
+        <Sidebar expanded={false}/>
         <div className="poem-text">
           {text.map((line, index) => (
             <Line
@@ -82,7 +84,7 @@ function App() {
             />
           ))}
       </div>
-      </div>
+     </main>
 
     </div>
   );
