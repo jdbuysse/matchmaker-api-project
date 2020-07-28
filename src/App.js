@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
-//import Slider from './Slider';
 import Line from './Line';
 import Sidebar from './Sidebar';
 
 function App() {
- //we want each line to be a component I believe
   const [text, setText] = useState([
     {
       lineContent: "About suffering they were never wrong,",
@@ -73,7 +71,7 @@ function App() {
 
       </header>
     <main>
-        <Sidebar expanded={false}/>
+        <Sidebar expanded={expanded}/>
         <div className="poem-text">
           {text.map((line, index) => (
             <Line

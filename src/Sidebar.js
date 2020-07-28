@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Sidebar() {
+function Sidebar({expanded}) {
 
     return (
         <div 
-            className={false ? "sidebar sidebar--expanded" : "sidebar"}
+            className={expanded ? "sidebar-expanded" : "sidebar"}
             onClick={console.log('toggel')} >
         </div>
          
