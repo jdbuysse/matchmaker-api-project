@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Line from './Line';
 import Sidebar from './Sidebar';
+import InputForm from './InputForm';
 
 const t1 = require('./demos1.json')
 const t2 = require('./demos2.json')
@@ -51,21 +52,11 @@ function App() {
       lineContent: "For the miraculous birth, there always must be",
       selected: 9
     },
-
   ])
-
-//   const [articles, queryArticles] = useState([
-    
-  
-// ])
-
-  // const loadDemoJson = () => {
-  //   const t1 = require('./demos1.json')
-  //   const t2 = require('./demos2.json')
-  //   return [t1,t2]
-  // }
   
   const [expanded, setExpand] = useState(false)
+
+  const [textBoxExpanded, setTextBoxExpand] = useState(false)
 
   const [selectedLine, setCurrentLine] = useState({
     currentLine: 0
@@ -73,6 +64,10 @@ function App() {
 
   const toggleExpand = () => {
     expanded === false ? setExpand(true) : setExpand(false)
+  }
+
+  const toggleTextBoxExpand = () => {
+    textBoxExpanded === false ? setTextBoxExpand(true) : setTextBoxExpand(false)
   }
 
   //this will change the text in state when I figure out 
@@ -96,6 +91,8 @@ function App() {
       </header>
     <main>
         <Sidebar expanded={expanded} selectedLine={selectedLine} data={t1}/>
+        <button className="text-input-button" onClick={toggleTextBoxExpand}>Enter text</button>
+        <InputForm expanded={textBoxExpanded} />
         <div className="poem-text">
           {text.map((line, index) => (
             <Line
