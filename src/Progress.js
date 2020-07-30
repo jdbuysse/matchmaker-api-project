@@ -1,12 +1,10 @@
 import React from 'react';
 
-function Progress({expanded, done, setComplete, complete}) {
+function Progress({expanded, done, setComplete, complete, setText , text}) {
 
     const [style, setStyle] = React.useState({});
     
-
     
-
     if (expanded){
 
         setTimeout(() => {
@@ -19,6 +17,12 @@ function Progress({expanded, done, setComplete, complete}) {
     
         setTimeout(() => {
             setComplete(true);
+            // I want to do it this way, but can't keep it from looping infinitely and crashing
+            // let newState = text.map((line) => {
+            //     line.loaded = true
+            // })
+            // })
+            //setText(newState)
           }, 2000);
 
         return(

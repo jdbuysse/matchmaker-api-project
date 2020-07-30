@@ -14,11 +14,13 @@ function App() {
   const [text, setText] = useState([
     {
       lineContent: "About suffering they were never wrong,",
-      selected: 0
+      selected: 0,
+      loaded: false
     },
     {
       lineContent: "The old Masters: how well they understood",
-      selected: 1
+      selected: 1,
+      loaded: false
     },
     {
       lineContent: "Its human position: how it takes place",
@@ -61,7 +63,7 @@ function App() {
   const [selectedLine, setCurrentLine] = useState({
     currentLine: 0
   })
-  const [loadComplete, setComplete] = React.useState(false);
+  const [loadComplete, setComplete] = useState(false);
 
   
   const toggleExpand = () => {
@@ -72,14 +74,7 @@ function App() {
     textBoxExpanded === false ? setTextBoxExpand(true) : setTextBoxExpand(false)
   }
 
-  //this will change the text in state when I figure out 
-  //how I want to handle my data
-  // const newText = thing => {
-  //   setText(thing);
-  // }
-
   const openSidebar = (line) => {
-    console.log('open sidebar line', line)
     toggleExpand()
     setCurrentLine({
       currentLine: line
@@ -96,13 +91,17 @@ function App() {
           expanded={expanded} 
           selectedLine={selectedLine.currentLine} 
           data={[t1,t2]}
-          complete = {loadComplete}
+          complete = {loadComplete} //change this to track text.loaded
+          //complete = {text[selectedLine.currentLine].loaded}
+          
         />
         <Progress 
           expanded={expanded} 
           done="100" 
           setComplete={setComplete} 
+          setText={setText}
           complete={loadComplete}
+          text = {text}
         />
         <button className="text-input-button" onClick={toggleTextBoxExpand}>Enter text</button>
         <InputForm expanded={textBoxExpanded} />
