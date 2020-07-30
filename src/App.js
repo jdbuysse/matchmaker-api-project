@@ -3,13 +3,13 @@ import './App.css';
 import Line from './Line';
 import Sidebar from './Sidebar';
 import InputForm from './InputForm';
+import Progress from './Progress';
 
 const t1 = require('./demos1.json')
 const t2 = require('./demos2.json')
 
 function App() {
 
-  //title, source, match topics, download/save buttons, matched query in context, scrollover image of page
 
   const [text, setText] = useState([
     {
@@ -91,6 +91,9 @@ function App() {
       </header>
     <main>
         <Sidebar expanded={expanded} selectedLine={selectedLine} data={t1}/>
+      
+          
+        <Progress expanded={expanded} done="100"/>
         <button className="text-input-button" onClick={toggleTextBoxExpand}>Enter text</button>
         <InputForm expanded={textBoxExpanded} />
         <div className="poem-text">
