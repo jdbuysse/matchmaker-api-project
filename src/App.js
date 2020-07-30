@@ -61,7 +61,9 @@ function App() {
   const [selectedLine, setCurrentLine] = useState({
     currentLine: 0
   })
+  const [loadComplete, setComplete] = React.useState(false);
 
+  
   const toggleExpand = () => {
     expanded === false ? setExpand(true) : setExpand(false)
   }
@@ -90,10 +92,18 @@ function App() {
 
       </header>
     <main>
-        <Sidebar expanded={expanded} selectedLine={selectedLine} data={t1}/>
-      
-          
-        <Progress expanded={expanded} done="100"/>
+        <Sidebar 
+          expanded={expanded} 
+          selectedLine={selectedLine.currentLine} 
+          data={[t1,t2]}
+          complete = {loadComplete}
+        />
+        <Progress 
+          expanded={expanded} 
+          done="100" 
+          setComplete={setComplete} 
+          complete={loadComplete}
+        />
         <button className="text-input-button" onClick={toggleTextBoxExpand}>Enter text</button>
         <InputForm expanded={textBoxExpanded} />
         <div className="poem-text">

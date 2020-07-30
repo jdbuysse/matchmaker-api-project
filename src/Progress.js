@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Progress({expanded, done}) {
+function Progress({expanded, done, setComplete, complete}) {
 
     const [style, setStyle] = React.useState({});
-    const [complete, setComplete] = React.useState(false);
+    
 
     
 
@@ -19,7 +19,7 @@ function Progress({expanded, done}) {
     
         setTimeout(() => {
             setComplete(true);
-        }, 5000);
+          }, 2000);
 
         return(
             <div className='progress'>
