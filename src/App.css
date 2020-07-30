@@ -154,11 +154,22 @@ body{
 }
 
 .line-card{
+  animation-delay: 4s;
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
   background-color: rgb(248, 246, 242);
   opacity: 45%;
   width: 90%;
   margin-left: 30px;
 }
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:45%;}
+  }
 
 .title{
   font-weight: bold;

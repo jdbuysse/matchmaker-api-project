@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function Progress({expanded, done, setComplete, complete, setText , text}) {
+const Progress = ({expanded, done, setComplete, complete, setText , text}) => {
 
     const [style, setStyle] = React.useState({});
-    
+
+    useEffect( () => {
+            let timer = setTimeout(() => {
+                console.log('hi')
+                setComplete(true);
+                // I want to do it this way, but can't keep it from looping infinitely and crashing
+                // let newState = text.map((line) => {
+                //     line.loaded = true
+                // })
+                // })
+                //setText(newState)
+              }, 2500);
+            return () =>{
+                clearTimeout(timer)
+            }
+        }, [])
+
     
     if (expanded){
 
@@ -15,16 +31,6 @@ function Progress({expanded, done, setComplete, complete, setText , text}) {
             setStyle(newStyle);
         }, 0);
     
-        setTimeout(() => {
-            setComplete(true);
-            // I want to do it this way, but can't keep it from looping infinitely and crashing
-            // let newState = text.map((line) => {
-            //     line.loaded = true
-            // })
-            // })
-            //setText(newState)
-          }, 2000);
-
         return(
             <div className='progress'>
                 <div className='progress-done' style={style}>
