@@ -51,8 +51,52 @@ function App() {
       selected: 8
     },
     {
-      lineContent: "For the miraculous birth, there always must be",
+      lineContent: "That even the dreadful martyrdom must run its course",
       selected: 9
+    },
+    {
+      lineContent: "Anyhow in a corner, some untidy spot",
+      selected: 10
+    },
+    {
+      lineContent: "Where the dogs go on with their doggy life and the torturer's horse",
+      selected: 11
+    },
+    {
+      lineContent: "Scratches its innocent behind on a tree.",
+      selected: 12
+    },
+    {
+      lineContent: "In Breughel's Icarus, for instance: how everything turns away",
+      selected: 13
+    },
+    {
+      lineContent: "Quite leisurely from the disaster; the ploughman may",
+      selected: 14
+    },
+    {
+      lineContent: "Have heard the splash, the forsaken cry,",
+      selected: 15
+    },
+    {
+      lineContent: "But for him it was not an important failure; the sun shone",
+      selected: 16
+    },
+    {
+      lineContent: "As it had to on the white legs disappearing into the green",
+      selected: 17
+    },
+    {
+      lineContent: "Water, and the expensive delicate ship that must have seen",
+      selected: 18
+    },
+    {
+      lineContent: "Something amazing, a boy falling out of the sky,",
+      selected: 19
+    },
+    {
+      lineContent: "Had somewhere to get to and sailed calmly on.",
+      selected: 20
     },
   ])
   
@@ -67,7 +111,13 @@ function App() {
 
   
   const toggleExpand = () => {
-    expanded === false ? setExpand(true) : setExpand(false)
+    if (expanded === false) {
+      setExpand(true)
+    }
+    else {
+      setExpand(false)
+      setComplete(true)
+    }
   }
 
   const toggleTextBoxExpand = () => {

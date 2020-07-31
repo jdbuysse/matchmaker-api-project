@@ -1,20 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+
 a{
   text-decoration: none;
 }
 
 body{
-  background-color: antiquewhite;
+  background-color: rgba(251, 204, 143, 0.349);
+  font-family: 'Spartan', sans-serif;
 }
 
-/* .progress-bar {
-  justify-content: right;
-} */
+.progress-bar {
+  position: relative;
+  margin-left: 125px;
+  margin-top: 50px;
+}
 
 .progress {
 	background-color: #d8d8d8;
 	border-radius: 20px;
 	position: relative;
-	margin: 15px 0;
+	margin: 0px 0;
 	height: 30px;
 	width: 300px;
 }
@@ -48,7 +53,7 @@ body{
   justify-content: flex-start;
   align-items: left;
   margin-left: 20vh;
-  width: 50%;
+  width: 30%;
 }
 
 .poem-text{
@@ -164,6 +169,7 @@ body{
   opacity: 45%;
   width: 90%;
   margin-left: 30px;
+  font-size: 75%;
 }
 
 @keyframes fadeIn {
@@ -175,3 +181,4 @@ body{
   font-weight: bold;
   text-decoration: none;
 }
+
