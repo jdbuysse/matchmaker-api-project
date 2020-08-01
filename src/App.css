@@ -11,7 +11,7 @@ body{
 
 .progress-bar {
   position: relative;
-  margin-left: 125px;
+  margin-left: 185px;
   margin-top: 50px;
 }
 
@@ -88,7 +88,6 @@ body{
 .line:hover, .line:focus, .line:active {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
-
 
 .hvr-icon-forward {
   display: inline-block;

@@ -7,7 +7,7 @@ const Progress = ({expanded, done, setComplete, complete}) => {
     useEffect( () => {
             let timer = setTimeout(() => {
                 setComplete(true);
-            }, 2500);
+            }, 2000);
 
             // let timer2 = setTimeout(() => {
             //     const newStyle = {
