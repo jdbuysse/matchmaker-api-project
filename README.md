@@ -1,3 +1,4 @@
+finish this
 Goal: use JSTOR labs' matchmaker API to query each line of a selected poem to generate links to criticism
 also create a handy visual API tool for people to run their own queries
 
