@@ -141,9 +141,7 @@ function App() {
           expanded={expanded} 
           selectedLine={selectedLine.currentLine} 
           data={[t1,t2]}
-          complete = {loadComplete} //change this to track text.loaded
-          //complete = {text[selectedLine.currentLine].loaded}
-          
+          complete = {loadComplete} 
         />
         <Progress 
           expanded={expanded} 
@@ -166,7 +164,6 @@ function App() {
           ))}
       </div>
      </main>
-
     </div>
   );
 }

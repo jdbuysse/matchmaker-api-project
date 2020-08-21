@@ -9,22 +9,13 @@ const Progress = ({expanded, done, setComplete, complete}) => {
                 setComplete(true);
             }, 2000);
 
-            // let timer2 = setTimeout(() => {
-            //     const newStyle = {
-            //         opacity: 1,
-            //         width: `${done}%`
-            //     }
-            //     setStyle(newStyle);
-            // }, 0);
             return () =>{
                 clearTimeout(timer)
-                // clearTimeout(timer2)
             }
         }, [])
 
     
     if (expanded){
-
         setTimeout(() => {
             const newStyle = {
                 opacity: 1,
@@ -45,10 +36,8 @@ const Progress = ({expanded, done, setComplete, complete}) => {
     }
     return(
         <div>
-
         </div>
     )
-
 }
 
 export default Progress;
